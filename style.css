@@ -1,0 +1,73 @@
+/* Define your color theme */
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #333333; /* Dark Gray */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    animation: fadeIn 2s ease-in;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Keyframes for animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
