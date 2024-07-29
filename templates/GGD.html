@@ -13,10 +13,8 @@
             <label for="word">Enter a word:</label>
             <input type="text" id="word" name="word" required>
             <button type="submit">Check</button>
-            <a href="rule.html">
-                <button>click here for the rule </button>
-            </a>
         </form>
+       <a href="{{ url_for('rule') }}" class="btn btn-info">Learn the Game Rule</a>
         {% if result %}
             <div class="result">{{ result }}</div>
             {% if 'cannot' in result %}

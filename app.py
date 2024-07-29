@@ -44,5 +44,9 @@ def check():
 def about():
     return render_template('about.html')
 
+@app.route('/rule')
+def rule():
+    return render_template('rule.html')
+    
 if __name__ == '__main__':
     app.run(debug=True)
