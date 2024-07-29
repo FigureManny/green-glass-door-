@@ -1,8 +1,8 @@
-/* Define your color theme */
+
 :root {
-    --primary-color: #4CAF50; /* Green */
-    --secondary-color: #ffffff; /* White */
-    --text-color: #333333; /* Dark Gray */
+    --primary-color: #4CAF50; 
+    --secondary-color: #ffffff; 
+    --text-color: #333333; 
 }
 
 body {
@@ -68,6 +68,22 @@ button:hover {
     height: auto;
 }
 
+.game-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.game-button:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
 @keyframes fadeIn {
     from {
         opacity: 0;

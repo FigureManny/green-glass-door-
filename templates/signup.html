@@ -5,15 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script>
+        function showGameButton() {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('game-button').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Sign Up</h1>
-        <form action="{{ url_for('signup') }}" method="post">
+        <form id="signup-form" action="{{ url_for('signup') }}" method="post" onsubmit="showGameButton(); return false;">
             <label for="username">Enter your username:</label>
             <input type="text" id="username" name="username" required>
             <button type="submit">Sign Up</button>
         </form>
+        <a id="game-button" href="{{ url_for('ggd') }}" style="display: none;" class="game-button">The Game</a>
     </div>
 </body>
 </html>

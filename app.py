@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -13,6 +13,15 @@ game = GreenGlassDoorGame()
 
 @app.route('/')
 def index():
+    return render_template('signup.html')
+
+@app.route('/signup', methods=['POST'])
+def signup():
+    username = request.form.get('username')
+    return render_template('signup.html', username=username)
+
+@app.route('/ggd')
+def ggd():
     return render_template('GGD.html')
 
 @app.route('/check', methods=['POST'])
