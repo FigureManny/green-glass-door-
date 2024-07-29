@@ -62,7 +62,12 @@ button:hover {
     font-weight: bold;
 }
 
-/* Keyframes for animation */
+.thumbs-down {
+    margin-top: 20px;
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

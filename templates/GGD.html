@@ -15,7 +15,10 @@
             <button type="submit">Check</button>
         </form>
         {% if result %}
-        <div class="result">{{ result }}</div>
+            <div class="result">{{ result }}</div>
+            {% if 'cannot' in result %}
+                <img src="{{ url_for('static', filename='thumbs-down.png') }}" alt="Thumbs Down" class="thumbs-down">
+            {% endif %}
         {% endif %}
     </div>
 </body>
