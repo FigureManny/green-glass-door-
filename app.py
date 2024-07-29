@@ -7,7 +7,7 @@ class GreenGlassDoorGame:
         self.rules = ["Objects with double letters can pass through."]
 
     def can_pass(self, word):
-        return any(letter*2 in word for letter in word)
+        return any(letter * 2 in word for letter in word)
 
 game = GreenGlassDoorGame()
 
@@ -18,7 +18,14 @@ def index():
 @app.route('/signup', methods=['POST'])
 def signup():
     username = request.form.get('username')
-    return render_template('signup.html', username=username)
+    password = request.form.get('password')
+    
+    # Basic check to ensure both username and password are provided
+    if username and password:
+        return redirect(url_for('ggd'))  # Redirect to the GGD page after signup
+    else:
+        # You might want to handle missing fields with a proper message or redirect
+        return render_template('signup.html', error='Both username and password are required.')
 
 @app.route('/ggd')
 def ggd():
